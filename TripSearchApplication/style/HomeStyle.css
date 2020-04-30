@@ -1,0 +1,16 @@
+#map{
+  height:400px;
+  width:100%;
+}
+#img{
+  height:50px;
+  width:50px;
+}
+
+#textbox{
+  padding: 25px;
+  text-align: center;
+}
+.center{
+  text-align: center;
+}
