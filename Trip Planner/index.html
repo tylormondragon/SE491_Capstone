@@ -4,14 +4,16 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        
+
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 
         <title>Trip Planner</title>
     </head>
-    
+
     <body>
         <header>
             <nav class="nav-bar">
@@ -29,7 +31,7 @@
                     <li><a href="#">Login/Register</a></li>
                 </ul>
             </nav>
-            
+
             <div class="header-text-box">
                 <h1>Be prepared for your adventures with us.</h1>
                 <a class="button button-filled" href="#">Trending Destinations >></a>
@@ -40,7 +42,7 @@
                         <div class="row">
                 <h2>Easy to browse. Easy to plan. Easy to heed.</h2>
                 <p>
-                    
+
                 </p>
             </div>
             <div class="row">
@@ -48,54 +50,37 @@
                     <h3>explore options.</h3>
                     <img src="resources/img/explore.png" alt="Explore" class="img">
                     <p>
-                        
+
                     </p>
-                
+
                 </div>
             <div class="col span-1-of-3 box">
                     <h3>plan.</h3>
                     <img src="resources/img/plan.png" alt="Explore" class="img">
                     <p>
-                    
+
                     </p>
-                
+
                 </div>
             <div class="col span-1-of-3 box">
                     <h3>have fun.</h3>
                     <img src="resources/img/fun.png" alt="Explore" class="img">
                     <p>
-                    
+
                     </p>
-                </div> 
+                </div>
             </div>
+
             <div class="row map-browser">
-                <p class="map-placeholder">
-                PUT MAP HERE
-                </p>
+              <div id='map'>
+              </div>
             </div>
         </section>
+        <script src="resources/js/maps.js"></script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzaNrNDMxAA-RhY3HDcGXPmf9eZogTr4&callback=initMap">
+        </script>
     </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
