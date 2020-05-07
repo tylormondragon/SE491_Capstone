@@ -1,0 +1,17 @@
+{
+  "name": "se491_capstone-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.18.5",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
