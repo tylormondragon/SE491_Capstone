@@ -16,64 +16,57 @@
 
     <body>
         <header>
-            <nav class="nav-bar">
+              <nav class="nav-bar">
                 <div class="logospace">
                     <img src="resources/img/logo.png" alt="Trip Planner logo" class="logo">
                     <p>Planner</p>
                 </div>
-                <input class="search" type="text" placeholder="Search">
-                <a class="main-nav-icon" href="#">
-                        <ion-icon name="search-circle" size="large"></ion-icon></a>
+
                 <ul class="main-nav">
                     <li><a href="#"> Home</a></li>
+                    <li><a href="#">About us</a></li>
+				    <li><a href="#">Contact</a></li>
                     <li><a class="main-nav-icon" href="#">
                             <ion-icon name="apps"></ion-icon></a></li>
                     <li><a href="#">Login/Register</a></li>
                 </ul>
             </nav>
-
+            
             <div class="header-text-box">
                 <h1>Be prepared for your adventures with us.</h1>
-                <a class="button button-filled" href="#">Trending Destinations >></a>
-                <a class="button button-outline" href="map.html">Browse Map</a> <!-- Added link to choropleth Map -->
+                <input type="text" class="search" placeholder="What are you looking for?" required="required">
+                <a class="search-button" href="#">Search</a>
+                <!--<a class="button button-filled" href="#">Search</a>
+
+                <a class="main-nav-icon" href="#">
+                        <ion-icon name="search-circle" size="large"></ion-icon></a>
+                <!-- <a class="button button-outline" href="#">Browse Map</a> -->
             </div>
+
         </header>
         <section class="section-features">
-                        <div class="row">
+            <div class="row">
+                <h2>Browse Destinations.</h2>
+                <div class="row map-browser">
+                    <div id='map'>
+                    </div>
+                </div>
+            
                 <h2>Easy to browse. Easy to plan. Easy to heed.</h2>
-                <p>
-
-                </p>
             </div>
             <div class="row">
                 <div class="col span-1-of-3 box">
                     <h3>explore options.</h3>
                     <img src="resources/img/explore.png" alt="Explore" class="img">
-                    <p>
-
-                    </p>
-
                 </div>
             <div class="col span-1-of-3 box">
                     <h3>plan.</h3>
                     <img src="resources/img/plan.png" alt="Explore" class="img">
-                    <p>
-
-                    </p>
-
                 </div>
             <div class="col span-1-of-3 box">
                     <h3>have fun.</h3>
                     <img src="resources/img/fun.png" alt="Explore" class="img">
-                    <p>
-
-                    </p>
                 </div>
-            </div>
-
-            <div class="row map-browser">
-              <div id='map'>
-              </div>
             </div>
         </section>
         <script src="resources/js/maps.js"></script>
@@ -81,6 +74,10 @@
         <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzaNrNDMxAA-RhY3HDcGXPmf9eZogTr4&callback=initMap">
         </script>
+            
+        <footer>
+        
+        </footer>
     </body>
 
 </html>
