@@ -8,7 +8,9 @@
     "nodemon": "^1.18.5",
     "request": "^2.88.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
   "scripts": {
     "start": "node src/app.js",
     "test": "jest"},
