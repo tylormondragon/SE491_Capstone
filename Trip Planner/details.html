@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trip Planner</title>
+    </head>
+
+    <body>
+        <header id="DetailsHeader">
+              <nav class="nav-bar">
+                <div class="logospace">
+                    <img src="resources/img/logo.png" alt="Trip Planner logo" class="logo">
+                    <p>Planner</p>
+                </div>
+
+                <ul class="main-nav">
+                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="#">About us</a></li>
+				    <li><a href="#">Contact</a></li>
+                    <li><a class="main-nav-icon" href="#">
+                            <ion-icon name="apps"></ion-icon></a></li>
+                    <li><a href="#">Login/Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="slideshow-container">
+            <div class="mySlides2">
+                <img id="imgslides" src="resources/img/Chicago-01.png" style="width:100%; height: 45vh">
+            </div>
+            
+            <div class="mySlides2">
+                <img id="imgslides" src="resources/img/Chicago-02.png" style="width:100%; height: 45vh">
+            </div>
+            
+            <div class="mySlides2">
+                <img id="imgslides" src="resources/img/Chicago-03.png" style="width:100%; height: 45vh">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+
+        <div>
+            <h2>Chicago</h2>
+            <p style="text-align: center;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+        </div>
+        <footer id="DetailsFooter">
+    
+        </footer>
+        
+        <script src="resources/js/slideshow.js"></script>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    </body>
+    
+</html>
