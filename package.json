@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "test-dev": "npm test"
   },
   "author": "",
   "license": "ISC"
