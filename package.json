@@ -11,8 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node src/app.js",
-    "test-dev": "npm test"
-  },
+    "test": "jest"},
   "author": "",
   "license": "ISC"
 }
