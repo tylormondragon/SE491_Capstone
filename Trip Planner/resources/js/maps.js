@@ -33,10 +33,9 @@ var map = new mapboxgl.Map({
 
     if (features.length > 0) {
       document.getElementById('pd').innerHTML = '<h3>Continent: </h3><h3>' + features[0].properties.continent+' </h3>';
-      // map.setPaintProperty(features[0].properties.ADMIN, "fill-color", '#eee695');
     }
     else {
-      document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+      document.getElementById('pd').innerHTML = '<p>Continent</p>';
     }
   });
 
@@ -48,6 +47,6 @@ var map = new mapboxgl.Map({
       document.getElementById('poi').innerHTML = '<h3><strong>' + features[0].properties.name + '</strong></h3>';
     }
     else {
-      document.getElementById('poi').innerHTML = '<p>No Parks</p>';
+      document.getElementById('poi').innerHTML = '<p>Country</p>';
     }
   });
