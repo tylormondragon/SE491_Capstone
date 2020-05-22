@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                
+
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/country-page.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+
+        <title>Trip Planner</title>
+
+    </head>
+
+    <body>
+        <header>
+            
+            <nav class="nav-bar">
+                <div class="logospace">
+                    <img src="resources/img/logo.png" alt="Trip Planner logo" class="logo">
+                    <p id = "location-name"></p>
+                </div>
+
+                <ul class="main-nav">
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#">About us</a></li>
+				    <li><a href="#">Contact Us</a></li>
+                    <li><a class="main-nav-icon" href="#">
+                            <ion-icon name="apps"></ion-icon></a></li>
+                    <li><a href="#">Login/Register</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <section class="section-features">
+            
+            <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators"></ol>
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner"></div>
+
+                          <!-- Left and right controls -->
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                    </div>
+            </div>
+            <div id="btn" class="row"> 
+                <a class="button button-filled" href="#cities">Trending Cities</a>
+                <a class="button button-filled" href="#attractions">Trending Attractions</a>
+            </div>
+            <div class="row" id="description" >
+                <p  style="color: black; width: 500px; position:absolute;"></p>
+            </div>
+            <div class="row" id="places-here" class="">
+                <div id="cities"></div>
+
+                <div id="attractions"></div>
+            </div>
+            <script src="resources/js/place-info.js"></script>
+            <script src="resources/js/city-suggestions.js">scrollX</script>
+
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <footer>
+
+        </footer>
+        <!-- <script src="resources/js/city-suggestions.js"></script> -->
+    </body>
+
+
+</html>
