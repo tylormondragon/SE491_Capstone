@@ -12,6 +12,7 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 
         <title>Trip Planner</title>
+
     </head>
 
     <body>
@@ -40,7 +41,7 @@
 
                 <a class="main-nav-icon" href="#">
                         <ion-icon name="search-circle" size="large"></ion-icon></a>
-                <!-- <a class="button button-outline" href="#">Browse Map</a> -->
+                 <a class="button button-outline" href="#">Browse Map</a> -->
             </div>
 
         </header>
@@ -49,7 +50,15 @@
                 <h2>Browse Destinations.</h2>
                 <div class="row map-browser">
                     <div id='map'>
+                        <script src="resources/js/maps.js"></script>
                     </div>
+
+                    <div class='map-overlay' id='features'>
+                        <h2>Select a country</h2>
+                        <div id='pd'><p>Continent</p></div>
+                        <div id='poi'><p>Country</p></div>
+                    </div>
+
                 </div>
             
                 <h2>Easy to browse. Easy to plan. Easy to heed.</h2>
@@ -69,12 +78,12 @@
                 </div>
             </div>
         </section>
-        <script src="resources/js/maps.js"></script>
+
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzaNrNDMxAA-RhY3HDcGXPmf9eZogTr4&callback=initMap">
         </script>
-            
+
         <footer>
         
         </footer>

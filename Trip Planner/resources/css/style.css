@@ -265,6 +265,7 @@ section {
 /*-------------------------------------------*/
 
 .map-browser {
+    position: relative;
     margin-top: 30px;
     font-size: 500%;
     height: 500px;
@@ -274,8 +275,42 @@ section {
 }
 
 #map{
+  position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+#features{
+    position: absolute;
+    top: 0;
+    height: 150px;
+    margin-top: 20px;
+    width: 250px;
+}
+.map-overlay, #features h2, h3 {
+    margin: 10px;
+    font-size: small;
+}
+
+.map-overlay, #features h3 {
+    font-size: small;
+}
+
+.map-overlay, #features p {
+    font-size: small;
+    margin: 10px;
+    text-align: left;
 }
 
 /*-------------------------------------------*/
