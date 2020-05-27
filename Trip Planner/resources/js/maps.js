@@ -6,7 +6,8 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/baazy/ckaekpyov1ipn1iqmpdhiqj2b' // replace this with your style URL
 });
 
-// map.on('load', function() {
+map.on('load', function() {
+  map.setMinZoom(2);
 //   // the rest of the code will go in here
 //   var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
 //   var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
@@ -24,7 +25,7 @@ var map = new mapboxgl.Map({
 //     item.appendChild(key);
 //     item.appendChild(value);
 //     legend.appendChild(item);
-//   }
+  });
 
   map.on('mousemove',function(e) {
     var features = map.queryRenderedFeatures(e.point, {
