@@ -1,4 +1,11 @@
-var url = "https://api.sygictravelapi.com/1.2/en/places/country:14";
+var dest = document.getElementById("location-name");
+
+var countryID = localStorage.getItem('country-id');
+dest.textContent = localStorage.getItem('country-name');
+console.log(dest.textContent);
+
+//var url = "https://api.sygictravelapi.com/1.2/en/places/country:14";
+var url = "https://api.sygictravelapi.com/1.2/en/places/" + countryID;
 fetch(url, {
 method: "GET",
 headers: {
@@ -18,12 +25,11 @@ return response.json();
 
 function appendCountryInfo(data) {
     var markup = '';
-    var dest = document.getElementById("location-name");
+    //var dest = document.getElementById("location-name");
     var desc = document.getElementById("description");
     console.log(desc);
 
-    var countryId = data.data.place.id;
-    dest.textContent = data.data.place.name;
+    //dest.textContent = data.data.place.name;
     var textd = data.data.place.description.text;
     desc.textContent = textd;
     var media = data.data.place.main_media.media;

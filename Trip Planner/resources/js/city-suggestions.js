@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+var dest = document.getElementById('location-name');
+var countryName = localStorage.getItem('country-name');
+//var countryName = 'France';
+dest.textContent = countryName;
+>>>>>>> Stashed changes
 
 const citiesurl = "https://api.sygictravelapi.com/1.2/en/places/list?parents=country:14&levels=city&limit=20";
 fetch(citiesurl, {
