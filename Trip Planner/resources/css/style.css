@@ -90,6 +90,20 @@ h2:after{
     margin-top: 30px;
     border-radius: 400px;
 }
+.map-header{
+    text-align: center;
+    padding-bottom: 0px;
+}
+.map-header:after{
+    display: block;
+    height: 2px;
+    background-color: #9529be;
+    content: "";
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 400px;
+}
 
 /*-------------------------------------------*/
 /* 4. BUTTONS */

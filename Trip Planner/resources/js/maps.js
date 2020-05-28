@@ -40,14 +40,40 @@ map.on('load', function() {
     }
   });
 
-  map.on('click', function(e) {
+   map.on('click', function(e) {
     var features = map.queryRenderedFeatures(e.point, {
       layers: ['countries'] // replace this with the name of the layer
     });
     if (features.length> 0){
       document.getElementById('poi').innerHTML = '<h3><strong>' + features[0].properties.name + '</strong></h3>';
+        alert(features[0].properties.name);
+        getCountryId(features[0].properties.name);
+
     }
     else {
       document.getElementById('poi').innerHTML = '<p>Country</p>';
     }
   });
+
+function getCountryId (countryName){
+    var URLfindID = "https://api.sygictravelapi.com/1.2/en/places/list?query="+countryName+"&levels=country";
+    fetch(URLfindID, {
+    method: "GET",
+    headers: {
+    "x-api-key": "M0L7R5tdYB2trBll3IOru9AqsGcx4jlvalKh3esc"
+    }
+    })
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function (data) {
+        var countryID = data.data.places[0].id;
+        localStorage.setItem('country-id', countryID);
+        localStorage.setItem('country-name', countryName);
+        window.document.location = './country-page.html';
+
+
+    });
+}
+
+

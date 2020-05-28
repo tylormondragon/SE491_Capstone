@@ -1,7 +1,9 @@
 var dest = document.getElementById('location-name');
-//var countryName = localStorage.getItem('place-name');
-var countryName = 'France';
+//var countryName = 'France';
+var countryName = localStorage.getItem('country-name');
+//var countryName = 'France';
 dest.textContent = countryName;
+
 
 var link = 'https://www.triposo.com/api/20200405/location.json?part_of=';
 var otherstuff = '&tag_labels=city&count=20';
