@@ -326,7 +326,194 @@ section {
     margin: 10px;
     text-align: left;
 }
+/*-------------------------------------------*/
+/* 10. CONTINENTS */
+/*-------------------------------------------*/
+#continent\3A 1 {
+    background-image: url(img/europe.png);
+}
+.decor:hover #continent\3A 1{
+    background-image: url(img/europe-2.png);
+}
+#continent\3A 2 {
+    background-image: url(img/africa.png);
+}
+.decor:hover #continent\3A 2{
+    background-image: url(img/africa-2.png);
+}
+#continent\3A 3 {
+    background-image: url(img/penguin.png);
+}
+.decor:hover #continent\3A 3{
+    background-image: url(img/penguin-1.png);
+}
+#continent\3A 4 {
+    background-image: url(img/asia.png);
+}
+.decor:hover #continent\3A 4{
+    background-image: url(img/asia-2.png);
+}
+#continent\3A 5 {
+    background-image: url(img/oceania.png);
+}
+.decor:hover #continent\3A 5{
+    background-image: url(img/oceania-2.png);
+}
+#continent\3A 6 {
+    background-image: url(img/north-america.png);
+}
+.decor:hover #continent\3A 6{
+    background-image: url(img/north-america-2.png);
+}
+#continent\3A 7 {
+    background-image: url(img/south-america.png);
+}
+.decor:hover #continent\3A 7{
+    background-image: url(img/south-america-2.png);
+}
+.c-image {
+    display: block;
+    background-size:cover;
+    background-position: center;
+    height: 120px;
+    width: 120px;
+    transform: translate(20%, 5%);
+}
+.decor:hover .image {
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+    width: 120px;
+}
+.continent-name{
+    display: block !important;
+    font-size: 80%;
+    position: absolute;
+    bottom: 20px;
+    left: initial;
+    width: 175px;
+    text-align: center;
+    justify-content: center;
+}
+.decor {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px 15px;
+  width: 175px;
+  height: 175px;
+  background: white;
+  border-radius: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.decor:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
 
+.decor:hover:before, .decor:hover:after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background: #FDA8CF;
+  border-radius: 40px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.decor:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+.holder{
+    text-align: center;
+    margin-top: 30px;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
 /*-------------------------------------------*/
 /* 6. FOOTER */
 /*-------------------------------------------*/
