@@ -1,4 +1,11 @@
-var url = "https://api.sygictravelapi.com/1.2/en/places/country:14";
+var dest = document.getElementById("location-name");
+
+var countryID = localStorage.getItem('country-id');
+dest.textContent = localStorage.getItem('country-name');
+console.log(dest.textContent);
+
+//var url = "https://api.sygictravelapi.com/1.2/en/places/country:14";
+var url = "https://api.sygictravelapi.com/1.2/en/places/" + countryID;
 fetch(url, {
 method: "GET",
 headers: {
