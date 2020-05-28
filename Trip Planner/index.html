@@ -77,41 +77,47 @@
                     <img src="resources/img/fun.png" alt="Explore" class="img">
                 </div>
             </div>
-                        <div class="row holder">
+            <div class="row holder">
                     <h2> See countries of</h2>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(1)">
                     <div id="continent:1" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">EUROPE</p>
                 </div>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(2)">
                     <div id="continent:2" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">AFRICA</p>
                 </div>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(4)">
                     <div id="continent:4" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">ASIA</p>
                 </div>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(5)">
                     <div id="continent:5" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">OCEANIA</p>
                 </div>
             </div>
             <div class="row holder">
-                <div class="decor">
+                <div class="decor" onclick="showCountries(6)">
                     <div id="continent:6" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">NORTH AMERICA</p>
                 </div>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(7)">
                     <div id="continent:7" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">SOUTH AMERICA</p>
                 </div>
-                <div class="decor">
+                <div class="decor" onclick="showCountries(3)">
                     <div id="continent:3" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">ANTARCTICA</p>
                 </div>
             </div>
         </section>
-
+        <script>
+            function showCountries(n) {
+                var continentID = "continent:" + n;
+                localStorage.setItem('continent-id', continentID);
+                window.document.location = './countries-list.html';
+            }
+        </script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzaNrNDMxAA-RhY3HDcGXPmf9eZogTr4&callback=initMap">
