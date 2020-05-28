@@ -1,5 +1,5 @@
-//var theCity = localStorage.getItem('place-name');
-var theCity = "Paris";
+var theCity = localStorage.getItem('place-id');
+//var theCity = "Paris";
 
 
 //https://www.triposo.com/api/20200405/poi.json?account=I0OEOPWQ&token=0d843xcrheh2r5cz6qj5a0b1kos2qjbp&location_id=Montpellier&fields=id,name,images,snippet
