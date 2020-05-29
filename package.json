@@ -6,10 +6,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^1.18.5",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "jest": "^23.6.0"
+    
   },
   "scripts": {
     "start": "node src/app.js",
