@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <!----------------------------added autocomplete------------------------------------------>
+        <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+        <script src="/resources/js/auto-complete.js"></script>
+        <script>
+            function myFunction(){
+                var cName = document.getElementById("txt").value;
+                //localStorage.setItem("textvalue",countryName);
+                console.log(cName);
+                getCountryId(cName);
+                return false; 
+                }
+        </script>    
+   <!--------------------------------------------------------------------------------> 
+
+
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -24,21 +51,31 @@
                 </div>
 
                 <ul class="main-nav">
-                    <li><a href="#"> Home</a></li>
-                    <li><a href="#">About us</a></li>
-				    <li><a href="#">Contact</a></li>
+                    <li><a href="./"> Home</a></li>
+                    <li><a href="./about-us.html">About us</a></li>
+				    <li><a href="./contacts.html">Contact</a></li>
                     <li><a class="main-nav-icon" href="#">
                             <ion-icon name="apps"></ion-icon></a></li>
-                    <li><a href="#">Login/Register</a></li>
+                    <li><a href="./register.html">Login/Register</a></li>
                 </ul>
             </nav>
             
             <div class="header-text-box">
                 <h1>Be prepared for your adventures with us.</h1>
-                <input type="text" class="search" placeholder="What are you looking for?" required="required">
-                <a class="search-button" href="country-page.html">Search</a>
-                <!--<a class="button button-filled" href="#">Search</a>
 
+                <!----------------------added autocomplete----------------------------------->
+                <form action="country-page.html">
+                    <input type ="text" id="txt" class="search" >
+                    <a id = "submit" value ="Click" class="search-button" onclick="myFunction()"; href="country-page.html">Search</a>
+                 </form>
+                <!------------------------------------------------------------>
+
+
+                <!-- <input type="text" class="search" placeholder="What are you looking for?" required="required">
+                <a class="search-button" href="country-page.html">Search</a> -->
+               
+               
+                <!--<a class="button button-filled" href="#">Search</a>
                 <a class="main-nav-icon" href="#">
                         <ion-icon name="search-circle" size="large"></ion-icon></a>
                  <a class="button button-outline" href="#">Browse Map</a> -->
@@ -127,5 +164,9 @@
         
         </footer>
     </body>
-
+    <!---------------------------------------------------->
+    <script src="/resources/js/map.js"></script>
+    <script src="/resources/js/city-suggestions.js"></script>
+    <script src="/src/app.js"></script>
+    <!---------------------------------------------------->
 </html>

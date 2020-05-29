@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-                
 
+        <!-----------------------------------added------------------------------------->
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/styles_test.css">
+        <!------------------------------------------------------------------------>
+       
+    
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -30,9 +35,9 @@
                 </div>
 
                 <ul class="main-nav">
-                    <li><a href="#"> Home</a></li>
-                    <li><a href="#">About us</a></li>
-				    <li><a href="#">Contact Us</a></li>
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="./">About us</a></li>
+				    <li><a href="./">Contact Us</a></li>
                     <li><a class="main-nav-icon" href="#">
                             <ion-icon name="apps"></ion-icon></a></li>
                     <li><a href="#">Login/Register</a></li>
@@ -40,6 +45,11 @@
             </nav>
             
         </header>
+        <!-------------------------------------added-autocomplete---------------------------------------->
+        <script>
+            document.getElementById("location-name").innerHTML=localStorage.getItem("textvalue");     
+        </script>
+        <!--------------------------------------------------------------------------------------->
         <section class="section-features">
             
             <div class="container">
@@ -78,11 +88,15 @@
 
         </section>
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
         <footer>
 
         </footer>
         <!-- <script src="resources/js/city-suggestions.js"></script> -->
+        <!--------------------------added------------------------------> 
+        <script src="/resources/js/auto-complete.js"></script>
+        <script src="/src/app.js"></script>
+        <!------------------------------------------------------------>
     </body>
 
 

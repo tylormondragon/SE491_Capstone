@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles_test.css">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    
+</head>
+<body>
+     <header>
+            <nav class="nav-bar">
+                <div class="logospace">
+                    <img src="resources/img/logo.png" alt="Trip Planner logo" class="logo">
+                    <p>Planner</p>
+                </div>
+                <ul class="main-nav">
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="/about-us.html">About us</a></li>
+				    <li><a href="/contacts.html">Contact</a></li>
+                    <li><a class="main-nav-icon" href="#">
+                            <ion-icon name="apps"></ion-icon></a></li>
+                    <li><a href="/register.html">Login/Register</a></li>
+                </ul>  
+            </nav>
+            <div class="header-text-box" style="text-align:left">
+               <h1></h1> 
+            </div>
+    </header>
+            <div style="text-align: center;">
+                <!-- {{>header}}  -->
+                <p><h3 style="color: rgb(252, 247, 253);"></h3></p>   
+                <!-- <p>{{error}}</p>    -->            
+            </div>
+            <div style="text-align: center;">
+                <!-- {{>header}}  -->
+                 <p><h3 style="color: rgb(246, 242, 247);"></h3></p>   
+                <!-- <p>{{error}}</p>    -->   
+               
+            </div>
+            <div class="container">
+                <h1 style="color:gray;">About Us</h1>
+                <hr>
+            <form action="/index.html">
+                <div class="container">
+                  <h2>Subscribe to our Newsletter</h2>
+                </div>
+
+                <div class="container" style="background-color:white">
+                  <input type="text" placeholder="Name" name="name" required>
+                  <input type="text" placeholder="Email address" name="mail" required>
+                  <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                  </label>
+                </div>
+
+                <div class="container">
+                  <input type="submit" value="Subscribe">
+                </div>
+              </form>
+            </div>
+        
+
+            <section class="section-features">  
+            </section>
+
+            <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+            <footer> 
+            </footer>
+</body>
+    <script src="/resources/src/app.js"></script>
+</html>

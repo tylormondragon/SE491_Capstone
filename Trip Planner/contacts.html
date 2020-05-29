@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles_test.css">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    
+</head>
+<body>
+     <header>
+            <nav class="nav-bar">
+                <div class="logospace">
+                    <img src="resources/img/logo.png" alt="Trip Planner logo" class="logo">
+                    <p>Planner</p>
+                </div> 
+                <ul class="main-nav">
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="/about-us.html">About us</a></li>
+				    <li><a href="/contacts.html">Contact</a></li>
+                    <li><a class="main-nav-icon" href="#">
+                            <ion-icon name="apps"></ion-icon></a></li>
+                    <li><a href="./register.html">Login/Register</a></li>
+                </ul>  
+            </nav>
+            <div class="header-text-box" style="text-align:left">
+               <h1></h1> 
+            </div>
+    </header>
+            <div style="text-align: center;">
+                <!-- {{>header}}  -->
+                <p><h3 style="color: rgb(252, 247, 253);"></h3></p>   
+                <!-- <p>{{error}}</p>    -->            
+            </div>
+
+   
+                <div style="text-align: center;">
+                    <p><h3 style="color: rgb(251, 247, 252);">Contact</h3></p>     
+                </div>
+    
+            <div class="row" style="background-color:white">
+                    
+                <div class="container">
+                    <h1 style="color: gray;">Contacts</h1>
+                    <hr>
+                          <form action="/index.html">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                              <option value="canada">USA</option>
+                              <option value="usa">Cannada</option>
+                            </select>
+
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                            <input type="submit" value="Submit">
+                          </form>
+                  
+    
+    
+         </div>               
+     </div>
+            <section class="section-features">  
+            </section>
+
+            <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+            <footer> 
+            </footer>
+</body>
+    <script src="/resources/src/app.js"></script>
+</html>
