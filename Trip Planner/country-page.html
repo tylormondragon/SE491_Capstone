@@ -6,8 +6,6 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        
-        <link rel="stylesheet" type="text/css" href="resources/css/country-page.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -15,6 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/country-page.css">
 
         <title>Trip Planner</title>
 
@@ -30,7 +30,7 @@
                 </div>
 
                 <ul class="main-nav">
-                    <li><a href="#"> Home</a></li>
+                    <li><a href="./index.html"> Home</a></li>
                     <li><a href="#">About us</a></li>
 				    <li><a href="#">Contact Us</a></li>
                     <li><a class="main-nav-icon" href="#">
@@ -62,16 +62,15 @@
                     </div>
             </div>
             <div id="btn" class="row"> 
-                <a class="button button-filled" href="#cities">Trending Cities</a>
-                <a class="button button-filled" href="#attractions">Trending Attractions</a>
+                <a class="button button-filled" href="#places-here">Trending Cities</a>
             </div>
             <div class="row" id="description" >
                 <p  style="color: black; width: 500px; position:absolute;"></p>
             </div>
-            <div class="row" id="places-here" class="">
-                <div id="cities"></div>
-                <a class="row see-all">See All Cities</a>
-                <div id="attractions"></div>
+            <div class="row" id="places-here">
+                <h2>Popular Cities</h2>
+                <a class="see-all">See All Cities</a>
+
             </div>
             <script src="resources/js/place-info.js"></script>
             <script src="resources/js/city-suggestions.js"></script>
@@ -80,7 +79,7 @@
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
         <footer>
-
+            <p style="color: white; padding: 20px 50px;">SE 491 Capstone © Trip Planner </p>
         </footer>
         <!-- <script src="resources/js/city-suggestions.js"></script> -->
     </body>

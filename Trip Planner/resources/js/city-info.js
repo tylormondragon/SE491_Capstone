@@ -43,8 +43,8 @@ function appendCityInfo(data) {
         var imageURL = media[index].source_url;
 
         markup += '<div class="item">';
-        //markup += '<img src="' +imageURL+ '" style="height:100vh;">'
-        markup += '<img src="' +imageURL+ '">';
+        markup += '<img src="' +imageURL+ '"object-fit: cover;">';
+        //markup += '<img src="' +imageURL+ '">';
         markup += '</div>';
     }
     $('#myCarousel .carousel-inner').html(markup);
