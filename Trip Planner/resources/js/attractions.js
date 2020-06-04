@@ -26,7 +26,7 @@ function appendAttractions(data) {
     var att_h2 = document.createElement('h2');
     att_h2.textContent = "Popular Attractions";
 
-    var attractions_div = document.getElementById('attractions');
+    var attractions_div = document.getElementById('places-here');
     attractions_div.appendChild(att_h2);
 
     for (var i = 0; i < data.results.length; i++) {
