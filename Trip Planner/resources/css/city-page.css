@@ -313,6 +313,7 @@ section {
     text-decoration:  none;
 
 }
+
 footer {
     background-image:linear-gradient(rgba(35, 6, 56, 0.8), rgba(35, 6, 56, 0.8)), url(img/footer.jpg);
     background-size: cover;

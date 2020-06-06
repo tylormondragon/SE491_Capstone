@@ -1,5 +1,5 @@
-function getCountries (continentID){
-const citiesurl = "https://api.sygictravelapi.com/1.2/en/places/list?parents=" + continentID + "&levels=country&limit=100";
+function getPOIs(){
+const citiesurl = "https://api.sygictravelapi.com/1.2/en/places/list?parents=continent:3&levels=poi&count=1";
 fetch(citiesurl, {
 method: "GET",
 headers: {
@@ -10,13 +10,13 @@ headers: {
 return response.json();
 })
 .then(function (data) {
-appendData(data);
+appendAllPOIs(data);
 })
 .catch(function (err) {
 console.log(err);
 });
 }
-function appendData(data) {
+function appendAllPOIs(data) {
     var countriesContainer = document.getElementById('all-countries');
 
     for (var i = 0; i < data.data.places.length; i++) {
@@ -47,7 +47,7 @@ function appendData(data) {
         countriesContainer.appendChild(mainContainer);
         
         mainContainer.addEventListener("click", function(){ 
-            getCountryId(this.id);
+            //getCountryId(this.id);
         });
 
     } 
