@@ -46,7 +46,6 @@ map.on('load', function() {
     });
     if (features.length> 0){
       document.getElementById('poi').innerHTML = '<h3><strong>' + features[0].properties.name + '</strong></h3>';
-        alert(features[0].properties.name);
         getCountryId(features[0].properties.name);
 
     }

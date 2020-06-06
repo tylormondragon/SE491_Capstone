@@ -37,7 +37,7 @@ function appendCities(data) {
         var currentPlace = data.results[i];
         var placeName = currentPlace.name;
         var placeId = currentPlace.id;
-        var iURL = currentPlace.images[0].source_url;
+        var iURL = currentPlace.images[0].sizes.thumbnail.url;
         
         mainContainer.id = placeId;
         image.src = iURL;
@@ -54,5 +54,6 @@ function appendCities(data) {
 
     } 
 
-} 
+}
+
 

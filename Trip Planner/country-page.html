@@ -69,15 +69,25 @@
             </div>
             <div class="row" id="places-here">
                 <h2>Popular Cities</h2>
-                <a class="see-all">See All Cities</a>
+                <a class="see-all" onclick="getAllCities()">See All Cities</a>
 
             </div>
-            <script src="resources/js/place-info.js"></script>
-            <script src="resources/js/city-suggestions.js"></script>
 
         </section>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <h3 id="c-name"></h3>
+                <div class="close-it">&times;</div>
+                <div id="all-cities"></div>
+            </div>
+        </div>
+        <script src="resources/js/place-info.js"></script>
+        <script src="resources/js/show-all-cities.js"></script>
+        <script src="resources/js/city-suggestions.js"></script>
+
+
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
         <footer>
             <p style="color: white; padding: 20px 50px;">SE 491 Capstone © Trip Planner </p>
         </footer>

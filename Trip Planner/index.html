@@ -115,15 +115,15 @@
             </div>
             <div class="row holder">
                     <h2> See countries of</h2>
-                <div class="decor" onclick="showCountries(1)">
+                <div class="decor" onclick="showCountries(1, 'Europe')">
                     <div id="continent:1" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">EUROPE</p>
                 </div>
-                <div class="decor" onclick="showCountries(2)">
+                <div class="decor" onclick="showCountries(2, 'Africa')">
                     <div id="continent:2" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">AFRICA</p>
                 </div>
-                <div class="decor" onclick="showCountries(4)">
+                <div class="decor" onclick="showCountries(4, 'Asia')">
                     <div id="continent:4" class="col span-1-of-4 c-image"></div>
                     <p class="continent-name">ASIA</p>
                 </div>
@@ -133,26 +133,46 @@
                 </div>
             </div>
             <div class="row holder">
-                <div class="decor" onclick="showCountries(6)">
+                <div class="decor" onclick="showCountries(6, 'North America')">
                     <div id="continent:6" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">NORTH AMERICA</p>
                 </div>
-                <div class="decor" onclick="showCountries(7)">
+                <div class="decor" onclick="showCountries(7, 'South America')">
                     <div id="continent:7" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">SOUTH AMERICA</p>
                 </div>
-                <div class="decor" onclick="showCountries(3)">
+                <div class="decor" onclick="showCountries(3, 'Antarctica')">
                     <div id="continent:3" class="col span-1-of-3 c-image"></div>
                     <p class="continent-name">ANTARCTICA</p>
                 </div>
             </div>
         </section>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <h3 id="c-name"></h3>
+                <div class="close">&times;</div>
+                <div id="all-countries">See Here</div>
+            </div>
+        </div>
         <script>
-            function showCountries(n) {
+            function showCountries(n, cName) {
+                document.querySelector('.bg-modal').style.display = 'flex';
+                document.getElementById('c-name').textContent = cName;
                 var continentID = "continent:" + n;
-                localStorage.setItem('continent-id', continentID);
-                window.document.location = './countries-list.html';
+                var countriesContainer = document.getElementById('all-countries');
+                document.querySelector('.close').addEventListener('click', function (){
+                    document.querySelector('.bg-modal').style.display = 'none';
+                });
+                countriesContainer.innerHTML = '';
+                if (cName == 'Antarctica'){
+                    getPOIs()
+                }
+                else {
+                    getCountries(continentID);
+                }
             }
+
+            
         </script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <script async defer
@@ -162,8 +182,12 @@
         <footer>
         <p style="color: white; padding: 20px 50px;">SE 491 Capstone © Trip Planner </p>
         </footer>
+     
     </body>
     <script src="/resources/js/map.js"></script>
+    <script src="/resources/js/countries-list.js"></script>
     <script src="/resources/js/city-suggestions.js"></script>
+    <script src="/resources/js/antarctica-pois.js"></script>
+
     <script src="/src/app.js"></script>
 </html>
