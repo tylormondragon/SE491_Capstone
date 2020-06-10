@@ -44,7 +44,6 @@ function appendCityInfo(data) {
 
         markup += '<div class="item">';
         markup += '<img src="' +imageURL+ '"object-fit: cover;">';
-        //markup += '<img src="' +imageURL+ '">';
         markup += '</div>';
     }
     $('#myCarousel .carousel-inner').html(markup);

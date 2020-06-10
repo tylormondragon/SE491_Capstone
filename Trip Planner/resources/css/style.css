@@ -531,8 +531,8 @@ section {
     display: none;
 }
 .modal-content {
-    width: 700px;
-    height: 800px;
+    width: 80vh;
+    height: 90vh;
     background-color: white;
     border-radius: 4px;
     opacity: 1 !important;

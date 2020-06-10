@@ -214,7 +214,9 @@ section {
 
 }
 
-
+/*-------------------------------------------*/
+/*  IMAGE SLIDES */
+/*-------------------------------------------*/
 .item {
     object-fit: cover;
     overflow: hidden;
@@ -224,6 +226,10 @@ section {
     height: 60vh;
     object-fit: fill;
 }
+
+/*-------------------------------------------*/
+/*  DESCRIPTION */
+/*-------------------------------------------*/
 
 #description {
     width: 700px;
@@ -237,6 +243,7 @@ section {
 #description p {
     line-height: 145%;
 }
+
 .suggestion {
     text-align: center;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -287,6 +294,11 @@ section {
     text-align: center;
 }
  
+#show-listing-here {
+    height: 600px;
+    
+}
+
 
 footer {
     background-image:linear-gradient(rgba(35, 6, 56, 0.8), rgba(35, 6, 56, 0.8)), url(img/footer.jpg);
