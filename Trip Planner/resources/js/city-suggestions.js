@@ -1,8 +1,7 @@
-var countryID = '';
 var dest = document.getElementById('location-name');
 var countryName = localStorage.getItem('country-name');
 dest.textContent = countryName;
-/*
+var cID = "";
 var URLforID = "https://www.triposo.com/api/20200405/location.json?tag_labels=country&annotate=trigram:"+countryName+"&trigram=>=0.3&count=1&fields=id,name,score,snippet&account=I0OEOPWQ&token=0d843xcrheh2r5cz6qj5a0b1kos2qjbp";
 
 fetch(URLforID)
@@ -10,34 +9,28 @@ fetch(URLforID)
 return response.json();
 })
 .then(function (data) {
-    countryID = data.results[0].id;
+    cID = data.results[0].id;
+    console.log(cID);
+    var URLforID ="https://www.triposo.com/api/20200405/location.json?tag_labels=city&count=10&fields=id,name,score,snippet,images&account=I0OEOPWQ&token=0d843xcrheh2r5cz6qj5a0b1kos2qjbp&part_of="+cID;
+    console.log(URLforID);
+    console.log(cID);
+
+         fetch(URLforID)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function (data) {
+        appendCities(data);
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
+
 })
 .catch(function (err) {
     console.log(err);
-});*/
-
-var link = 'https://www.triposo.com/api/20200405/location.json?part_of=';
-var otherstuff = '&tag_labels=city&count=20';
-var infofields = '&fields=id,name,images';
-var apitoken = '&account=I0OEOPWQ&token=0d843xcrheh2r5cz6qj5a0b1kos2qjbp';
-
-
-/*var URLforID = "https://www.triposo.com/api/20200405/location.json?tag_labels=city&annotate=trigram:"+res+"&trigram=>=0.3&count=20&fields=id,name,score,snippet,images,part_of&account=I0OEOPWQ&token=0d843xcrheh2r5cz6qj5a0b1kos2qjbp";*/
-
-fetch(link + countryName + otherstuff + infofields + apitoken)
-//var res = countryName.substring(0, 5);
-//console.log(res);
-
-
-.then(function (response) {
-return response.json();
 })
-.then(function (data) {
-    appendCities(data);
-})
-.catch(function (err) {
-    console.log(err);
-});
+
 
 function appendCities(data) {
 
