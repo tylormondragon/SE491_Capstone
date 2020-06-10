@@ -1,0 +1,279 @@
+
+div.content {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background:whitesmoke;
+  padding: 0px;
+  border-color: rgb(13, 13, 14);
+  box-shadow: rgb(88, 8, 236);
+  border-width: 10px;
+}
+div.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  height: 450px;
+  background-color:white;
+  overflow-y:auto;
+ 
+}
+div.col{
+  background-color:white;
+  height:250px;
+  width:500px;
+  margin-bottom: 30px;
+}
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+  * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
+  .map {
+    position:absolute;
+    left:40.1%;
+    right: 40%;
+    width:30%;
+    height:60px;
+    margin-right: 100px;
+  }
+
+  h1 {
+    font-size:22px;
+    margin:0;
+    font-weight:400;
+    line-height: 20px;
+    padding: 20px 2px;
+  }
+
+  a {
+    color:#404040;
+    text-decoration:none;
+  }
+
+  a:hover {
+    color:#101010;
+  }
+
+  .heading {
+    background:#fff;
+    border-bottom:1px;
+    min-height:50px;
+    line-height:50px;
+    padding:120px;
+    background-color:skyblue;
+    color: #fff;
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  .listings {
+    height:100%;
+    overflow:auto;
+    padding-bottom:60px;
+    border-bottom-left-radius:2px ;
+    margin-bottom: 30%; 
+  }
+
+  .listings .item {
+    display:block;
+    padding:10px;
+    text-decoration: #f8ab30;
+    text-align:left;
+    margin-right: 76%;
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+    margin-right: 5rem;
+    background-color: #f8ab30;
+    
+  }
+
+  .listings .item:last-child { border-bottom:none; }
+  .listings .item .title {
+    color:gray;
+    font-weight:700;
+  }
+
+  .listings .item .title small { font-weight:400; }
+  .listings .item.active .title,
+  .listings .item .title:hover { color:gray; }
+  .listings .item.active {
+    background-color:#f8f8f8;
+  }
+  ::-webkit-scrollbar {
+    width:10px;
+    height:2px;
+    border-left:0;
+    background:rgba(0,0,0,0.1);
+  }
+  ::-webkit-scrollbar-track {
+    background:none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:#f8ab30;
+    border-radius:0;
+  }
+
+  .marker {
+    border: none;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    background-image: url(marker.png);
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .clearfix { display:block; }
+  .clearfix:after {
+    content:'.';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+  }
+
+  /* Marker tweaks */
+  .mapboxgl-popup {
+    padding-bottom: 50px;
+  }
+
+  .mapboxgl-popup-close-button {
+    display:none;
+  }
+  .mapboxgl-popup-content {
+    font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding:0;
+    width:180px;
+  }
+  .mapboxgl-popup-content-wrapper {
+    padding:1%;
+  }
+  .mapboxgl-popup-content h3 {
+    background: #f8ab30;
+    color:#fff;
+    margin:0;
+    display:block;
+    padding:10px;
+    border-radius:3px 3px 0 0;
+    font-weight:700;
+    margin-top:-15px;
+  }
+
+  .mapboxgl-popup-content h4 {
+    margin:0;
+    display:block;
+    padding: 10px 10px 10px 10px;
+    font-weight:400;
+  }
+
+  .mapboxgl-popup-content div {
+    padding:10px;
+  }
+
+  .mapboxgl-container .leaflet-marker-icon {
+    cursor:pointer;
+  }
+
+  .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+    margin-top: 15px;
+  }
+
+  .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+    border-bottom-color:  #f8ab30;
+  }
+
+  .mapboxgl-ctrl-geocoder {
+    border: 2px solid  #f8ab30;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    width: 800px;
+    margin-top: 0;
+    border: 0;
+  }
+
+  .mapboxgl-ctrl-geocoder > div {
+    min-width:100%;
+    margin-left:0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    text-align: left;
+  }
+  .map-responsive{
+    width:20%;
+    position:center;
+    height:40%;
+}
+.see-poi {
+    float: right;
+}
+
+/*-------------------------------------------*/
+/* 6. POP UP MODAL */
+/*-------------------------------------------*/
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+     background-color: rgba(0,0,0,0.7);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal-content {
+    width: 85vh;
+    height: 90vh;
+    background-color: white;
+    border-radius: 4px;
+    opacity: 1 !important;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: scroll;
+    z-index: 99;
+}
+.close-it{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 42px;
+    cursor: pointer; 
+}
+.close:hover{
+    color: red;
+}
+#poi-details {
+    position: relative;
+    margin:5px; 
+    padding:5px; 
+    text-align:justify; 
+}
+#poi-name{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 120%;
+}
+#image-here{
+    margin-top: 20px;
+    z-index: 199;
+}
+

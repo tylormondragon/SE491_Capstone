@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-                
+        
+        <!------------------------------------------------mapbox plugin--------------------------------------->
+         <!-- Geocoder plugin -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
+        <!-- Turf.js plugin -->
+        <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+
+        <!------------------------------------------------------------------------------------------------------>
 
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
-        <link rel="stylesheet" type="text/css" href="resources/css/city-page.css">
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="resources/css/city-page.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/styles_test.css">
 
         <title>Trip Planner</title>
 
@@ -61,17 +73,37 @@
                           </a>
                     </div>
             </div>
-            <div id="btn" class="row"> 
-                <a class="button button-filled" href="#places-here">Trending Attractions</a>
-            </div>
             <div class="row" id="description" >
                 <p  style="color: black; width: 500px; position:absolute;"></p>
             </div>
-            <div class="row" id="places-here" class="">
-                <a class="see-all">See All Attractions</a>
+            <form id="show-listing-here" name="form1" action="country-page.html" method="GET">
+        
+                <div class="row" style="border-color: #f8ab30 ;" >
+                      <div class="column" id="cities" >
+                            <div class="row" style="margin-top:0px;">
+                                  <!-- <h4 >Top Travel Location</h4>    -->
+                            </div>
+                            <div id="sidebar" >
+                                <div id='listings' class='listings'></div>
+                            </div>
+                      </div> 
+                      <div  class="column" style="background-color:white;border-color: #f8ab30;border-style: solid; ">
+                            <div id="map"></div>
+                      </div>
+                </div>  
+            </form>
+            <div class="bg-modal">
+                <div class="modal-content">
+                    <h3 id="poi-name"></h3>
+                    <div class="close-it">&times;</div>
+                    <div id="image-here"></div>
+                    <div id="poi-details"></div>
+                </div>
             </div>
             <script src="resources/js/city-info.js"></script>
-            <script src="resources/js/attractions.js"></script>
+            <script src="resources/js/attractions-map.js"></script>
+            <script src="resources/js/attraction-info.js"></script>
+
 
         </section>
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
